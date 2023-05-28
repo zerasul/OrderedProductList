@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "name": "V-NECH BASIC SHIRT",
+      "salesUnits": 100,
+      "stock": [
+        {
+          "size": "M",
+          "units": 9
+        },
+        {
+          "size": "L",
+          "units": 0
+        },
+        {
+          "size": "S",
+          "units": 4
+        }
+      ]
+    },
+    {
+      "name": "RAISED PRINT T-SHIRT",
+      "salesUnits": 80,
+      "stock": [
+        {
+          "size": "S",
+          "units": 20
+        },
+        {
+          "size": "M",
+          "units": 2
+        },
+        {
+          "size": "L",
+          "units": 20
+        }
+      ]
+    },
+    {
+      "name": "CONSTRASTING FABRIC T-SHIRT",
+      "salesUnits": 50,
+      "stock": [
+        {
+          "size": "L",
+          "units": 9
+        },
+        {
+          "size": "M",
+          "units": 9
+        },
+        {
+          "size": "S",
+          "units": 35
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "sales",
+    "orderColumns": [
+      {
+        "name": "salesUnits",
+        "direction": "DESC"
+      }
+    ]
+  },
+  {
+    "name": "stocks",
+    "orderColumns": [
+      {
+        "name": "totalStock",
+        "direction": "DESC"
+      }
+    ]
+  }
+]
