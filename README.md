@@ -1,5 +1,7 @@
 # Prueba técnica Productos Ordenados
 
+[![Java CI with Maven](https://github.com/zerasul/OrderedProductList/actions/workflows/maven.yml/badge.svg)](https://github.com/zerasul/OrderedProductList/actions/workflows/maven.yml)
+
 En este repositorio, puedes encontrar una aplicación de ejemplo con una resolución a una prueba técnica, para devolver un listado de productos ordenados por varios criterios.
 
 En esta aplicación basada en Spring Boot despliega una API REST, que recibe a través de la URL, un nombre de criterio.
