@@ -28,14 +28,16 @@ public class Product {
     @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private Set<Stock> stock;
 
-    @Column(name="totalStock")
-    private Long totalStock;
+    @Column(name="stockRatio")
+    private Double stockRatio;
 
     @PrePersist
     @PreUpdate
     public void onPersist(){
-        this.totalStock=this.stock.stream().map(Stock::getUnits).
-                reduce(0L,Long::sum);
+        Double totalStock=this.stock.stream().map(Stock::getUnits).
+                reduce(0L,Long::sum).doubleValue();
+        Double totalUnits = totalStock+this.salesUnits;
+        this.stockRatio= (totalStock/totalUnits)*100;
     }
 
     public void addStock(Stock stock){

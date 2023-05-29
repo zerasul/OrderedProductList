@@ -12,7 +12,7 @@
     "name": "stocks",
     "orderColumns": [
       {
-        "name": "totalStock",
+        "name": "stockRatio",
         "direction": "DESC"
       }
     ]

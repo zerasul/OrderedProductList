@@ -17,7 +17,7 @@ GET http://localhost:8091/api/products/criteria/{criteriaName}
 Donde _criteriaName_, es el nombre del criterio para ordenar los productos ordenados por dicho criterio; puedes encontrar dos:
 
 * _sales_: El listado es ordenado por el número de productos vendidos de forma descendente.
-* _stock_: El listado es ordenado por el stock total de cada producto.
+* _stock_: El listado es ordenado por Ratio de Stock con respecto a las unidades vendidas.
 
 ## Arrancar la aplicación
 
@@ -44,6 +44,8 @@ docker-compose up
 ```
 
 Se arrancará una instancia de Mysql y la propia aplicación.
+
+**NOTA:** En el directorio _data_, hay un script sql por si quiere insertar datos de ejemplo.
 
 También puede usar los tests de integración, usando un contenedor Mysql (Que se arranca automáticamente el iniciar los tests) para probar la aplicación. 
 
