@@ -45,7 +45,7 @@ docker-compose up
 
 Se arrancará una instancia de Mysql y la propia aplicación.
 
-También puede usar los tests de integración, usando un contenedor Mysql para probar la aplicación. 
+También puede usar los tests de integración, usando un contenedor Mysql (Que se arranca automáticamente el iniciar los tests) para probar la aplicación. 
 
 Para lanzar los tests:
 
