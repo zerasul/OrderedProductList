@@ -17,8 +17,3 @@ insert into Stock(size,units,idProduct)values('L',9,2);
 insert into Stock(size,units,idProduct)values('S',20,3);
 insert into Stock(size,units,idProduct)values('M',2,3);
 insert into Stock(size,units,idProduct)values('L',20,3);
-
--- Criterias
-
-insert into ProductCriteria(id, name, orderColumns)values(1,'sales','salesUnits:DESC');
-insert into ProductCriteria(id, name, orderColumns)values(1,'stocks','stockRatio:DESC');

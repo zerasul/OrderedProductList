@@ -10,4 +10,5 @@ public class ProductItemModel {
     private String name;
     private Long salesUnits;
     private Set<StockModel> stock;
+    private Double score;
 }

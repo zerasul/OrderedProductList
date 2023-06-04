@@ -2,13 +2,9 @@ package es.ind.ordercriteria;
 
 import es.ind.ordercriteria.config.PersistenceConfig;
 import es.ind.ordercriteria.config.common.CommonConfig;
-import es.ind.ordercriteria.domain.products.ProductCriteriaRepository;
 import es.ind.ordercriteria.domain.products.ProductRepository;
 import jakarta.annotation.Resource;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -16,8 +12,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.ClassPathResource;
@@ -25,12 +19,10 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.testcontainers.shaded.com.fasterxml.jackson.databind.JsonNode;
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.nio.file.Files;
-import java.nio.file.Path;
 
 @ActiveProfiles("test")
 @ContextConfiguration(classes = AppBaseIntegrationTest.TestConfig.class)
@@ -43,8 +35,6 @@ public class AppBaseIntegrationTest {
     @Resource
     protected MockMvc mockMvc;
 
-    @Resource
-    protected ProductCriteriaRepository productCriteriaRepository;
 
     @Resource
     protected ProductRepository productRepository;
@@ -55,7 +45,6 @@ public class AppBaseIntegrationTest {
 
     @AfterEach
     protected void tearDown(){
-        productCriteriaRepository.deleteAll();
         productRepository.deleteAll();
 
     }

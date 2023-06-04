@@ -1,6 +1,8 @@
 package es.ind.ordercriteria.port.adapter.products;
 
+import java.util.List;
+
 public interface ProductsByCriteriaPort {
 
-    ProductsViewModel getProductsByCriteria(String criteria);
+    ProductsViewModel getProductsByCriteria(List<ProductsByCriteriaRequestModel> criterias);
 }

@@ -16,4 +16,6 @@ public class ProductItemViewModel {
     private String name;
     private Long salesUnits;
     private Set<StockViewModel> stock;
+    private Double score;
+
 }

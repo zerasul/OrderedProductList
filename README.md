@@ -4,20 +4,35 @@
 
 En este repositorio, puedes encontrar una aplicación de ejemplo con una resolución a una prueba técnica, para devolver un listado de productos ordenados por varios criterios.
 
-En esta aplicación basada en Spring Boot despliega una API REST, que recibe a través de la URL, un nombre de criterio.
+En esta aplicación basada en Spring Boot despliega una API REST, que recibe una lista de criterios con un peso en cada uno.
 
-Estos criterios de ordenación, se han insertado en una base de datos; además de los productos junto a su Stock.
+Estos criterios permitirán calcular para cada producto una puntuación (scrore) que será por la que se ordene de forma descendente.
 
 Para acceder a esta API, puede hacerlo de la siguiente forma:
 
 ```
-GET http://localhost:8091/api/products/criteria/{criteriaName} 
+POST http://localhost:8091/api/products/criteria/ 
 ```
 
-Donde _criteriaName_, es el nombre del criterio para ordenar los productos ordenados por dicho criterio; puedes encontrar dos:
+Que recibe los siguientes Datos:
 
-* _sales_: El listado es ordenado por el número de productos vendidos de forma descendente.
-* _stock_: El listado es ordenado por Ratio de Stock con respecto a las unidades vendidas.
+```json
+[{
+  "name": "salesUnit",
+  "weight": "2",
+  "column": "salesUnits"
+},
+  {
+    "name": "stockratio",
+    "weight": "3",
+    "column": "stockRatio"
+  }
+]
+```
+
+Con respecto al peso, se realizará una suma ponderada de cada columna establecida con su peso. 
+
+Esta api devolverá el listado ya ordenado.
 
 ## Arrancar la aplicación
 

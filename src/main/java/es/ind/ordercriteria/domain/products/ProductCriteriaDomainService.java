@@ -1,8 +1,9 @@
 package es.ind.ordercriteria.domain.products;
 
-import es.ind.ordercriteria.domain.products.entity.ProductCriteria;
+import java.util.List;
 
 public interface ProductCriteriaDomainService {
 
-    ProductCriteria obtainCriteria(String name);
+
+    List<ProductWithValues> getProductsWithValues();
 }

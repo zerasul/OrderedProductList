@@ -1,0 +1,11 @@
+[{
+  "name": "salesUnit",
+  "weight": "2",
+  "column": "salesUnits"
+},
+  {
+    "name": "stockratio",
+    "weight": "3",
+    "column": "stockRatio"
+  }
+]
